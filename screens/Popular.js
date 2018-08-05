@@ -7,8 +7,9 @@ import {
   ActivityIndicator
 } from "react-native";
 import MovieItem from "./MovieItem";
+import { createStackNavigator } from "react-navigation";
 
-export default class NowPlaying extends React.Component {
+export default class Popular extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +21,7 @@ export default class NowPlaying extends React.Component {
   async componentDidMount() {
     // const timeout = ms => new Promise(res => setTimeout(res, ms));
     let url =
-      "https://api.themoviedb.org/3/movie/now_playing?api_key=8c54b08b120d2d59bdffb9c090467daa";
+      "https://api.themoviedb.org/3/movie/popular?api_key=8c54b08b120d2d59bdffb9c090467daa";
     let response = await fetch(url);
     let data = await response.json();
     // await timeout(3000);
