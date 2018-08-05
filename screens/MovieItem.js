@@ -23,9 +23,7 @@ export default class MovieItem extends Component {
           <Image
             style={styles.images}
             source={{
-              uri: `https://image.tmdb.org/t/p/original${
-                this.props.poster_path
-              }`
+              uri: `https://image.tmdb.org/t/p/w342/${this.props.poster_path}`
             }}
           />
         </TouchableOpacity>
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
   },
   images: {
     alignItems: "stretch",
-    height: 180,
-    width: 120
+    height: 200,
+    width: 140
   }
 });

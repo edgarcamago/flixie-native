@@ -8,13 +8,12 @@ import {
   Image
 } from "react-native";
 
-export default class LoginScreen extends React.Component {
+export default class SearchScreen extends React.Component {
   static navigationOptions = {
-    title: "Login",
     headerStyle: {
       backgroundColor: "black"
     },
-    headerTintColor: "white"
+    headerTintColor: "red"
   };
   render() {
     return (
@@ -23,23 +22,12 @@ export default class LoginScreen extends React.Component {
           style={styles.container}
           onPress={() => this.props.navigation.navigate("MovieList")}
         >
-          <Text
-            style={{
-              color: "white",
-              fontWeight: "bold",
-              fontSize: 20,
-              marginBottom: 10
-            }}
-          >
-            WHO WATCHIN?!
-          </Text>
+          <Text style={{ color: "white" }}>WHO WATCHIN?!</Text>
           <Image
             style={styles.image}
             source={require("../profileavatar.png")}
           />
-          <Text style={{ marginTop: 5, color: "white", fontWeight: "bold" }}>
-            Edgar
-          </Text>
+          <Text style={{ color: "white" }}>Edgar</Text>
         </TouchableOpacity>
       </View>
     );

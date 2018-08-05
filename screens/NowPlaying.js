@@ -19,8 +19,7 @@ export default class NowPlaying extends React.Component {
 
   async componentDidMount() {
     // const timeout = ms => new Promise(res => setTimeout(res, ms));
-    let url =
-      "https://api.themoviedb.org/3/movie/now_playing?api_key=8c54b08b120d2d59bdffb9c090467daa";
+    let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=8c54b08b120d2d59bdffb9c090467daa`;
     let response = await fetch(url);
     let data = await response.json();
     // await timeout(3000);
@@ -34,7 +33,7 @@ export default class NowPlaying extends React.Component {
     if (!this.state.loaded) {
       return <ActivityIndicator size="large" style={{ flex: 1 }} />;
     }
-
+    console.log(this.props);
     return (
       <View style={{ flex: 1 }}>
         <FlatList
